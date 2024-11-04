@@ -1,13 +1,16 @@
 package model;
 
 public class Estacao {
-    private String nome;
-    private Linha linha;
+    private int idEst;
+    private String nome;    // Novo atributo para o nome da estação
+    private String linha; 
+
 
     public Estacao() {
     }
 
-    public Estacao(String nome, Linha linha) {
+    public Estacao(int idEst, String nome, String linha) {
+        this.idEst=idEst;
         this.nome = nome;
         this.linha = linha;
     }
@@ -20,18 +23,27 @@ public class Estacao {
         this.nome = nome;
     }
 
-    public Linha getLinha() {
+    public String getLinha() {
         return linha;
     }
 
-    public void setLinha(Linha linha) {
+    public void setLinha(String linha) {
         this.linha = linha;
+    }
+
+    public int getIdEst() {
+        return idEst;
+    }
+
+    public void setIdEst(int idEst) {
+        this.idEst = idEst;
     }
 
     @Override
     public String toString() {
         return "Estacao{" +
-                "nome='" + nome + '\'' +
+                " id='" + idEst + '\'' +
+                ", nome='" + nome + '\'' +
                 ", linha=" + linha +
                 '}';
     }
