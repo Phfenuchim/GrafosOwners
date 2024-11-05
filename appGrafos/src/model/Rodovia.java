@@ -1,21 +1,25 @@
 package model;
 
-public class Linha<TIPO> {
-    private int numeroLinha;
+public class Rodovia<TIPO> {
+   
+    private int numeroRodovia;
+    private String nomeRodovia;
     private Double tempo; // para calculo de tempo do trajeto
     private Vertice<TIPO> inicio;
     private Vertice<TIPO> fim;
     
     
-    public Linha() {
+    public Rodovia() {
     }
 
-    public Linha(int nLinha, Vertice<TIPO> inicio, Vertice<TIPO> fim, Double tempo) {
-        this.numeroLinha = nLinha;
+    public Rodovia(int numeroRodovia, String nomeRodovia, Double tempo, Vertice<TIPO> inicio, Vertice<TIPO> fim) {
+        this.numeroRodovia = numeroRodovia;
+        this.nomeRodovia = nomeRodovia;
+        this.tempo = tempo;
         this.inicio = inicio;
         this.fim = fim;
-        this.tempo = tempo;
     }
+    
 
     public Vertice<TIPO> getInicio() {
         return inicio;
@@ -42,19 +46,19 @@ public class Linha<TIPO> {
         this.tempo = tempo;
     }
 
-    public int getNumeroLinha() {
-        return numeroLinha;
+    public int getNumeroRodovia() {
+        return numeroRodovia;
     }
 
-    public void setNumeroLinha(int numeroLinha) {
-        this.numeroLinha = numeroLinha;
+    public void setNumeroRodovia(int numeroRodovia) {
+        this.numeroRodovia = numeroRodovia;
     }
     
 
     @Override
     public String toString() {
-        return "Linha{" +
-                "numeroLinha=" + numeroLinha +
+        return "Rodovia{" +
+                "numeroRodovia=" + numeroRodovia +
                 ", estacoes="  +
                 '}';
     }

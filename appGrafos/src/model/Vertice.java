@@ -4,47 +4,47 @@ package model;
 import java.util.ArrayList;
 
 public class Vertice<TIPO> {
-    private Estacao estacao;
-    private ArrayList<Linha<TIPO>> arestaEntrada;
-    private ArrayList<Linha<TIPO>> arestaSaida;
+    private Cidade eidade;
+    private ArrayList<Rodovia<TIPO>> arestaEntrada;
+    private ArrayList<Rodovia<TIPO>> arestaSaida;
 
-    public Vertice(Estacao estacao) {
-        this.estacao = estacao;
-        this.arestaEntrada = new ArrayList<Linha<TIPO>>();
-        this.arestaSaida = new ArrayList<Linha<TIPO>>();
+    public Vertice(Cidade eidade) {
+        this.eidade = eidade;
+        this.arestaEntrada = new ArrayList<Rodovia<TIPO>>();
+        this.arestaSaida = new ArrayList<Rodovia<TIPO>>();
     }
 
 
-    public Estacao getEstacao() {
-        return estacao;
+    public Cidade getCidade() {
+        return eidade;
     }
 
-    public void setEstacao(Estacao estacao) {
-        this.estacao = estacao;
+    public void setCidade(Cidade eidade) {
+        this.eidade = eidade;
     }
 
-    public ArrayList<Linha<TIPO>> getArestaEntrada() {
+    public ArrayList<Rodovia<TIPO>> getArestaEntrada() {
         return arestaEntrada;
     }
 
-    public ArrayList<Linha<TIPO>> getArestaSaida() {
+    public ArrayList<Rodovia<TIPO>> getArestaSaida() {
         return arestaSaida;
     }
 
-    public void setArestaEntrada(ArrayList<Linha<TIPO>> arestaEntrada) {
+    public void setArestaEntrada(ArrayList<Rodovia<TIPO>> arestaEntrada) {
         this.arestaEntrada = arestaEntrada;
     }
 
 
-    public void setArestaSaida(ArrayList<Linha<TIPO>> arestaSaida) {
+    public void setArestaSaida(ArrayList<Rodovia<TIPO>> arestaSaida) {
         this.arestaSaida = arestaSaida;
     }
 
-    public void adicionarArestaEntrada(Linha<TIPO> aresta) {
+    public void adicionarArestaEntrada(Rodovia<TIPO> aresta) {
         this.arestaEntrada.add(aresta);
     }
 
-    public void adicionarArestaSaida(Linha<TIPO> aresta) {
+    public void adicionarArestaSaida(Rodovia<TIPO> aresta) {
         this.arestaSaida.add(aresta);
     }
 
