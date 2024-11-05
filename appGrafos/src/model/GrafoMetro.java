@@ -13,10 +13,10 @@ public class GrafoMetro<TIPO> {
         Vertice<TIPO> novoVertice = new Vertice<TIPO>(cidade);
         this.vertices.add(novoVertice);
     }
-    public void adicionarAresta(int nRodovia,String nomeRodovia,Double tempo,TIPO dadoInicio,TIPO dadofim){
+    public void adicionarAresta(int nRodovia,String nomeRodovia,Double tempo,Double km,TIPO dadoInicio,TIPO dadofim){
         Vertice <TIPO> inicio = this.getVertice(dadoInicio);
         Vertice <TIPO> fim = this.getVertice(dadofim);
-        Rodovia <TIPO> Rodovia = new Rodovia<TIPO>(nRodovia,nomeRodovia,tempo,inicio,fim);
+        Rodovia <TIPO> Rodovia = new Rodovia<TIPO>(nRodovia,nomeRodovia,tempo,km,inicio,fim);
         inicio.adicionarArestaSaida(Rodovia);
         fim.adicionarArestaEntrada(Rodovia);
         this.Rodovia.add(Rodovia);
