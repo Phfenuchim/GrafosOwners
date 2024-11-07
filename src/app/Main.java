@@ -269,6 +269,8 @@ public class Main {
             grafo.adicionarAresta(225,"Rod.Transamazonica e BR-230",2880.0,3047.0,"27","21");// "São Luís"- "Porto Velho"
             grafo.adicionarAresta(226,"BR-135",2460.0,2798.0,"27","26");// "São Luís"- "Vitória"
             grafo.adicionarAresta(227,"BR-135",2100.0,2522.0,"27","3");// "São Luís"- "Belo Horizonte"
+            grafo.adicionarAresta(228,"BR-364",376.0,509.0,"21","23");// "Porto Velho"- "Rio Branco"
+
         }
 
         boolean continuar = true;
