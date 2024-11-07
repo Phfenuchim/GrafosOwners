@@ -1,10 +1,16 @@
 package app;
 // Exemplo de uso com as estações de metrô de São Paulo
 
-import model.*;;
+import model.*;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)  {
+
+        Scanner scan = new Scanner(System.in);
+        
+            
         GrafoMetro<String> grafo = new GrafoMetro<String>();
         {
         // Adicionando todas as capitais brasileiras como "estações" e as principais rodovias como "linhas"
@@ -266,16 +272,37 @@ public class Main {
         grafo.adicionarAresta(226,"BR-135",2460.0,2798.0,"27","26");// "São Luís"- "Vitória"
         grafo.adicionarAresta(227,"BR-135",2100.0,2522.0,"27","3");// "São Luís"- "Belo Horizonte"
         }
+        int opc = 0;
+            do{
 
 
-        System.out.println("Grafo de estações de metrô de São Paulo criado com sucesso!");
-        // Aqui podem ser implementadas funções para buscar rotas, calcular menor caminho, etc.
-        try {
-            grafo.BuscaEmLargura(1);
-        } catch (Exception e) {
-            // TODO: handle exception
-            System.out.println("error"+e.getMessage());
-        }
+                System.out.println("-Menu-\n");
+                System.out.println("1 - Caminhos possíveis\n");//Busca por largura
+                System.out.println("2 - Caminho com menor distância\n");//Busca pela profundidade
+                System.out.println("3 - Caminho com menor tempo\n");//busca por profundidade
+                System.out.println("4 - Listar capitais brasileira \n");//Impressao de lista ligada
+                System.out.println("5 - Sair");
+                opc = scan.nextInt();
+                switch(opc){
+
+                    case 1:
+
+                        System.out.println("Escreva a capital que você está:");
+                            String camPossiveis = scan.next();
+                            grafo.caminhosPossiveis(camPossiveis);
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                      grafo.imprimirVertice();
+                        break;
+                    case 5: 
+                        System.exit(0);
+                        break;
+                }
+            } while(opc != -1);
         
     
     }

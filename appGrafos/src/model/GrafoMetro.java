@@ -6,6 +6,8 @@ public class GrafoMetro<TIPO> {
     private ArrayList<Vertice<TIPO>> vertices;
     private ArrayList<Rodovia<TIPO>> Rodovia;
     public GrafoMetro(){
+
+
         this.vertices = new ArrayList<Vertice<TIPO>>();
         this.Rodovia = new ArrayList<Rodovia<TIPO>>();
     }
@@ -34,7 +36,7 @@ public class GrafoMetro<TIPO> {
     public void BuscaEmLargura(int n){
         ArrayList<Vertice<TIPO>> marcados = new ArrayList<Vertice<TIPO>>();
         ArrayList<Vertice<TIPO>> fila = new ArrayList<Vertice<TIPO>>();
-        Vertice<TIPO> atual = this.vertices.get(n-1);
+        Vertice<TIPO> atual = this.vertices.get(n);
         marcados.add(atual);
         System.out.println(atual.getCidade());
         fila.add(atual);
@@ -51,8 +53,37 @@ public class GrafoMetro<TIPO> {
             }
         
         }
+
     }
 
+    public void imprimirVertice()
+    {
+        try {
 
 
+        for (int i = 0; i<= vertices.size();i++) {
+            System.out.println(vertices.get(i).getCidade());
+        }
+        }catch (Exception e){
+            System.out.println();
+        }
+    }
+
+    public int buscaId(String idCidade){
+        for(int i = 0; i<= vertices.size();i++){
+            if(vertices.get(i).getCidade().getIdEst().equals(idCidade)){
+                return i ;
+            }
+        }
+        return -1;
+    }
+
+    public void caminhosPossiveis(String n) {
+        try {
+            BuscaEmLargura(buscaId(n));
+        } catch (Exception e) {
+            System.out.println();
+        }
+
+    }
 }
