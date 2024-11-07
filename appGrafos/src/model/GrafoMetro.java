@@ -6,8 +6,6 @@ public class GrafoMetro<TIPO> {
     private ArrayList<Vertice<TIPO>> vertices;
     private ArrayList<Rodovia<TIPO>> Rodovia;
     public GrafoMetro(){
-
-
         this.vertices = new ArrayList<Vertice<TIPO>>();
         this.Rodovia = new ArrayList<Rodovia<TIPO>>();
     }
@@ -51,9 +49,7 @@ public class GrafoMetro<TIPO> {
                 }
                 fila.remove(0);
             }
-        
         }
-
     }
 
     public void imprimirVertice()
