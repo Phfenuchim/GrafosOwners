@@ -2,15 +2,14 @@ package model;
 
 public class Cidade {
     private String idEst;
-    private String nome;    // Novo atributo para o nome da estação
-    private String estado; 
-
+    private String nome;
+    private String estado;
 
     public Cidade() {
     }
 
     public Cidade(String idEst, String nome, String estado) {
-        this.idEst=idEst;
+        this.idEst = idEst;
         this.nome = nome;
         this.estado = estado;
     }
@@ -23,11 +22,11 @@ public class Cidade {
         this.nome = nome;
     }
 
-    public String getLinha() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setLinha(String estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 
@@ -41,10 +40,6 @@ public class Cidade {
 
     @Override
     public String toString() {
-        return "Cidade{" +
-                " id='" + idEst + '\'' +
-                ", nome='" + nome + '\'' +
-                ", estado=" + estado +
-                '}';
+        return String.format("[ID: %d] | Cidade: %s - Estado: %s", Integer.parseInt(idEst), nome, estado);
     }
 }

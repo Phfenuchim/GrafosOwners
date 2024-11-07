@@ -1,6 +1,5 @@
 package model;
 
-// Classe Vertice
 import java.util.ArrayList;
 
 public class Vertice<TIPO> {
@@ -35,7 +34,6 @@ public class Vertice<TIPO> {
         this.arestaEntrada = arestaEntrada;
     }
 
-
     public void setArestaSaida(ArrayList<Rodovia<TIPO>> arestaSaida) {
         this.arestaSaida = arestaSaida;
     }
@@ -48,9 +46,4 @@ public class Vertice<TIPO> {
         this.arestaSaida.add(aresta);
     }
 
-
-
-
-
-    
 }
